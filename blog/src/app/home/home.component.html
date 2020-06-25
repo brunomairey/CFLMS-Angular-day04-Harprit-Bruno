@@ -1,0 +1,20 @@
+
+
+<h2 class= "mt-3 mb-3 text-center">Our Last articles</h2>
+
+<div class="row row-cols-12 px-4">
+    <div *ngFor="let x of articles" class="col-6 mb-4 p-2">
+      <div class="card">
+      	
+	        <img src="{{x.img}}" class="card-img-top" alt="mountain">
+	        <div class="card-body">
+	          <h5 class="card-title">{{x.place}} </h5>
+	          <p class="card-text"><sup>{{x.author}}, Created on {{x.created}}</sup> <br>
+	           <b>{{x.date}}, {{x.time}}</b><br>
+	          <br>
+	            {{x.description}}</p>
+	        </div>
+  	
+      </div>
+  </div>
+</div>
