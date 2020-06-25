@@ -1,1 +1,28 @@
-<p>contact works!</p>
+<h3>Contact us</h3>
+
+<!-- <div class="cart-item" *ngFor="let item of items">
+ <span>{{ item.name }} </span>
+ <span> {{ item.price | currency }}</span>
+</div> -->
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" class="container">
+
+ <div class="form-group">
+    <label for="name">First name: </label>
+    <input id="name" class="form-control" type="text" formControlName="FirstName">
+ </div>
+
+ <div>
+    <label for="name">Last name: </label>
+    <input id="name" class="form-control" type="text" formControlName="LastName">
+ </div>
+
+ <div>
+    <label for="address">E-mail address: </label>
+    <input id="address" class="form-control" type="text" formControlName="address">
+ </div>
+<br>
+ <!-- <button class="button" type="submit">Purchase</button> -->
+ <button type="button" class="btn btn-success" type="submit">Submit Data</button>
+
+</form>
