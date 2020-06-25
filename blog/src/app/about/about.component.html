@@ -1,1 +1,20 @@
-<p>about works!</p>
+<h2 class= "mt-3 mb-3 text-center">Our Last articles</h2>
+
+<div class="row row-cols-12 px-4">
+    <div *ngIf="about" class="col-12 mb-4 p-2">
+      <div class="card">
+
+	        <img src="{{about.img}}" class="card-img-top" alt="mountain">
+	        <div class="card-body">
+	          <h5 class="card-title">{{about.place}} </h5>
+	          <p class="card-text"><sup>{{about.author}}, Created on {{about.created}}</sup> <br>
+	           <b>{{about.date}}, {{about.time}}</b><br>
+	          <br>
+	            {{about.description}}</p>
+	            Lopsem 
+	        </div>
+  		
+      </div>
+  </div>
+</div>
+

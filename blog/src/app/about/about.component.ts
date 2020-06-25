@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { blogentries } from '../blogentries';
 
 @Component({
   selector: 'about',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.sass']
 })
 export class AboutComponent implements OnInit {
+about;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() { 
+  this.route.paramMap.subscribe(params => {
+   this.about = blogentries[+params.get('ID')];
+  });
+ 
   }
 
 }
